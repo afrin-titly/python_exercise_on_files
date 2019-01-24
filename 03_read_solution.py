@@ -1,5 +1,5 @@
 with open("list_output.txt", "r") as file_handler:
-    for line in file_handler:
-        a,b,c = line.split(",")
-        # another_string = "-".join(str(x) for x in string)
-        print(a+"-"+c)
+    with open("read_solution_output.txt", "w+") as file_handler_output:
+        for line in file_handler:
+            a,b,c = line.split(",")
+            file_handler_output.write(a+"-"+c)
